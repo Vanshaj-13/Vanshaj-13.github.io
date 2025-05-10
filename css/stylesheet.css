@@ -4,6 +4,11 @@ body{
   max-height: 90vh !important;
 }
 
+body.stop-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 header{
   
   background: transparent;
@@ -244,6 +249,7 @@ header a{
   margin-right: 5%;
   display: inline-block;
   transition: 0.5s;
+  font-size: 25px;
 }
 
 .about-me-overview:hover{
@@ -251,13 +257,14 @@ header a{
   transform: scale(102%);
 }
 
+
 .overview-image{
   display: inline;
   width:17%;
   margin-top: 0vh;
   position: absolute;
   right: 75%; 
-  top: 155%;
+  top: 140%;
   transition: 0.5s;
 }
 
@@ -297,6 +304,9 @@ header a{
   margin-right: 5%;
   display: inline-block;
   transition: 0.5s;
+  font-size: 25px; /* Add this line or increase the px value as desired */
+  line-height: 28px; /* Optional: improves readability */
+
 }
 
 .about-me:hover{
@@ -314,7 +324,7 @@ header a{
   color:#2272FF;
   font-weight: 130%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  float: right;
+  float: left;
   margin-top: 2%;
   margin-right: 2%;
   display: block;
@@ -378,6 +388,30 @@ header a{
   transform: scale(110%);
   opacity: 1;
 }
+
+.logo-table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.logo-table td {
+  padding: 20px;
+}
+
+.logo-table img {
+  width: 250px;
+  max-width: 100%;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.logo-table img:hover {
+  opacity: 1;
+  transform: scale(110%);
+}
+
 
 .exp-text{
   color:white;
@@ -506,7 +540,7 @@ header a{
 
 .contact-text{
   color: white;
-  font-size: 130%;
+  font-size: 150%;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transition: 0.5s;
@@ -542,4 +576,132 @@ header a{
 .columns{
   margin-top: 5%;
   margin-right: 10%;
+}
+
+
+
+.contact-heading {
+  color: #2272FF;
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-section {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-column {
+  flex: 1;
+  text-align: center;
+  min-width: 150px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+.contact-text {
+  color: white;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS */
+
+.project-container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.project {
+  width: 100%;
+  margin: 80px 0; 
+  transition: 0.3s;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-direction: row;
+}
+
+.project.alt .project-content {
+  flex-direction: row-reverse;
+}
+
+.project img {
+  width: 45%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-text {
+  width: 55%;
+  color: white;
+}
+
+.project-title {
+  font-size: 22px;
+  color: #2272FF;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.project-desc {
+  color: white;
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column !important;
+  }
+
+  .project img, .project-text {
+    width: 100%;
+  }
 }
